@@ -180,3 +180,23 @@ Brute force.
     	me.move('right');
     }
 ```
+
+# odbol
+
+```javascript
+// bouncy bot
+            
+    me.step = me.step ? me.step + 1 : 1;
+    
+    if (me.step % 3 != 0) {
+        me.move('right');
+    }
+    else {
+        if (me.isGoingUp && me.canMove('up')) 
+              me.move('up');
+        else if (!me.isGoingUp && me.canMove('down') ) 
+            me.move('down');
+        else
+            me.isGoingUp = !me.isGoingUp;
+    }
+```
